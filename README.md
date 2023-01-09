@@ -79,3 +79,43 @@ If you would like to contribute to this project, please follow these guidelines:
 - Test your changes thoroughly.
 - Submit a pull request with a detailed description of your changes.
 
+# Real-Time Dashboard for Meetup Group's RSVP
+
+This project uses the Dash framework to create a real-time dashboard for tracking Meetup group RSVPs. The dashboard displays a bar chart and a table showing the top 10 groups by RSVP count, as well as a pie chart showing the proportion of "yes" and "no" responses for each group.
+
+## Dependencies
+
+- Dash
+- pandas
+- sqlalchemy
+
+## Setup
+
+1. Install the dependencies listed above.
+2. Modify the MySQL connection parameters (`host_name`, `port_no`, `user_name`, `password`, and `database_name`) in the `build_pd_df_from_sql` function to match your MySQL setup.
+3. Run the code using `python app.py` or a similar command.
+4. Open a web browser and navigate to the URL displayed in the console to view the dashboard.
+
+## Usage
+
+The dashboard automatically updates every 30 seconds to show the latest data from the MySQL database.
+
+## Code Overview
+
+The code is organized into the following blocks:
+
+1. Imports the necessary libraries and initializes the Dash application.
+2. Defines the `build_pd_df_from_sql` function, which queries the MySQL database and returns two pandas dataframes.
+3. Calls the `build_pd_df_from_sql` function and stores the returned dataframes in variables `df1` and `df2`.
+4. Assigns HTML content to the Dash application layout, including a bar chart and a table showing the top 10 groups by RSVP count, and a pie chart showing the proportion of "yes" and "no" responses for each group.
+5. Defines callback functions to update the bar chart and the pie chart with the latest data from the MySQL database.
+6. Runs the Dash application.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these guidelines:
+
+- Fork the repository and make your changes in a branch.
+- Test your changes thoroughly.
+- Submit a pull request with a detailed description of your changes.
+
