@@ -20,7 +20,7 @@ The producer then enters an infinite loop, in which it makes a GET request to th
 
 ## Components
 
-The project consists of a single Python script, `kafka_producer.py`, which contains the Kafka producer code.
+The project consists of a single Python script, `kafka_producer_demo.py`, which contains the Kafka producer code.
 
 ## Setup and installation
 
@@ -32,7 +32,7 @@ The project consists of a single Python script, `kafka_producer.py`, which conta
 ## Usage
 
 To run the Kafka producer, use the following command:
-python kafka_producer.py
+`python kafka_producer.py`
 
 
 The producer will start streaming data from the Meetup RSVP Stream API and sending it to the Kafka topic specified in the `kafka_topic_name` variable.
