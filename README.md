@@ -42,3 +42,40 @@ The producer will start streaming data from the Meetup RSVP Stream API and sendi
 - [Meetup RSVP Stream API documentation](https://www.meetup.com/api/general)
 - [Kafka documentation](https://kafka.apache.org/documentation/)
 
+# Stream Processing Application
+
+This project uses Apache Spark to process data from a Kafka topic in real-time.
+
+## Dependencies
+
+- Apache Spark
+- Apache Kafka
+
+## Setup
+
+1. Install Apache Spark and Apache Kafka.
+2. Modify the `kafka_bootstrap_servers` and `kafka_topic_name` variables in the code to match your Kafka setup.
+3. Run the code using `spark-submit` or a similar tool.
+
+## Usage
+
+The code reads data from the specified Kafka topic and processes it using the Spark Structured Streaming API. The resulting data is printed to the console.
+
+## Code Overview
+
+The code is organized into the following blocks:
+
+1. Initializes a SparkSession and sets the log level to `ERROR`.
+2. Reads data from the specified Kafka topic using the `readStream` method of the SparkSession.
+3. Defines a schema for the data being read from Kafka.
+4. Transforms the data using the defined schema and selects specific columns for further processing.
+5. Prints the schema of the transformed data to the console.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these guidelines:
+
+- Fork the repository and make your changes in a branch.
+- Test your changes thoroughly.
+- Submit a pull request with a detailed description of your changes.
+
